@@ -5,6 +5,13 @@ This runs the [TK4-](http://wotho.ethz.ch/tk4-/) distribution of MVS 3.8J inside
 All credit belongs to Juergen Winkelmann for creating TK4-, Volker Bande for creating TK3, the Hercules team for
 creating Hercules, IBM for creating MVS, etc. - all I did was package it into a Docker container.
 
+## License
+
+I release these scripts and Dockerfile into the public domain, see [LICENSE](LICENSE) for details.
+
+Note that license only applies to the scripts and Dockerfile, the underlying components (TK4-, Hercules,
+Debian, etc) remain under their respective copyright licenses.
+
 ## Running it
 
 ```
