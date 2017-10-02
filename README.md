@@ -65,4 +65,3 @@ Alternatively, using line mode (instead of 3270):
 2. `LOGON HERC01/CUL8TR`
 3. `SHUTDOWN`
 4. `LOGOFF`
-5. Ctrl+] then `quit`
