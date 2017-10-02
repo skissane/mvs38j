@@ -1,5 +1,13 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-./build
-docker create --name mvs38j -p 8038:8038 -p 3270:3270 -p 33351:33351 -p 33352:33352 -p 33353:33353 mvs38j
+
+containerExists() {
+	local _name="$1"
+	[ "$(docker ps -aq -f "name=${_name}" | wc -l)" -gt 0 ]
+}
+
+containerExists mvs38j || {
+	./build
+	docker create --name mvs38j -p 8038:8038 -p 3270:3270 -p 33351:33351 -p 33352:33352 -p 33353:33353 mvs38j
+}
 docker start mvs38j

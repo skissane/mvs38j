@@ -1,0 +1,3 @@
+#!/bin/bash
+docker rm -f mvs38j
+docker rmi -f mvs38j
