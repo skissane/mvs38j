@@ -1,0 +1,2 @@
+#!/bin/bash
+docker exec -it mvs38j c3270 localhost:3270

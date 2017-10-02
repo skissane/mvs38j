@@ -1,0 +1,12 @@
+#!/bin/bash
+cd "$(dirname "$0")/docker"
+
+abortMsg() {
+	echo 1>&2 "ERROR: $*"
+	exit 1
+}
+
+([ -f tk4-_v1.00_current.zip ] || wget http://wotho.ethz.ch/tk4-/tk4-_v1.00_current.zip ) ||
+	abortMsg "Download of TK4- failed"
+
+docker build -t mvs38j .
