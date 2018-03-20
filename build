@@ -6,7 +6,7 @@ abortMsg() {
 	exit 1
 }
 
-([ -f tk4-_v1.00_current.zip ] || wget http://wotho.ethz.ch/tk4-/tk4-_v1.00_current.zip ) ||
+([ -f tk4-_v1.00_current.zip ] || wget https://github.com/skissane/mvs38j/releases/download/v1.0.8.0/tk4-_v1.00_current.zip ) ||
 	abortMsg "Download of TK4- failed"
 
 docker build -t mvs38j .
